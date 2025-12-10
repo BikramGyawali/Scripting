@@ -1,24 +1,25 @@
 <?php   
 class A{
-	public $name;
-	public function __construct($name){
-   $this->name=$name;
+	protected $name;
+// 	 function __construct($name){
+//    $this->name=$name;
 
-	}
+// 	}
 
 	public function show(){
 		echo"Hello ".$this->name."<br>";
 	}
 }
-
+$obj = new A();
+$obj->name="Bikram Gyawali";
+$obj->show();
 class B extends A{
 	public function getData(){
 		echo"Your name is".$this->name."<br>";
 	}
 	
 }
-$obj = new B("Bikram Gyawali");
-$obj->show();
-$obj->getData();
+
+// $obj->getData();
 
 ?>
